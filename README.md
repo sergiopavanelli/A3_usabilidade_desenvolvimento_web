@@ -102,3 +102,4 @@ Esta seção será atualizada com os diagramas UML relevantes para o projeto, in
 ## 6. 🧑‍🎓 Autores
 
 * Sérgio Pinton Pavanelli - RA: 123220202
+* Mateus Mendes Mattos - 123117292
