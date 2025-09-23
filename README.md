@@ -2,8 +2,8 @@
 
 ## 🎓 Projeto da Disciplina: Usabilidade, Desenvolvimento Web, Mobile e Jogos - A3
 **Instituição:** UniBH - Centro Universitário de Belo Horizonte
-**Curso:** Análise e Desenvolvimento de Sistemas / Ciência da Computação (ou seu curso)
-**Semestre:** 2º Semestre
+**Curso:** Ciência da Computação
+**Semestre:** 2025/2
 
 ---
 
