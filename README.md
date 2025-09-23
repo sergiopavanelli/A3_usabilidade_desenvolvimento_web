@@ -58,6 +58,31 @@ A acessibilidade é um requisito não funcional crítico. Para garantir a compat
 * **Contraste de Cores:** A paleta de cores do site será validada para garantir um contraste mínimo adequado, facilitando a leitura por pessoas com baixa visão.
 * **Navegação via Teclado:** Toda a funcionalidade do site será acessível utilizando apenas o teclado.
 
+### 2.4. 🧱 Arquitetura e Frameworks Detalhados
+
+Para construir uma aplicação robusta como o LoopMarket, utilizaremos um ecossistema de bibliotecas e frameworks que se complementam, seguindo as melhores práticas de desenvolvimento web moderno.
+
+#### **Frontend (Interface do Usuário)**
+
+* **Framework Principal:** **React.js**
+    * **Função:** Construção da interface do usuário de forma componentizada, reativa e escalável.
+
+* **Bibliotecas Complementares:**
+    * 🌐 **React Router:** Para gerenciar a navegação entre as diferentes páginas da aplicação (ex: Home, Produto, Perfil) em um ambiente de *Single Page Application (SPA)*.
+    * 🗃️ **Redux Toolkit:** Para o gerenciamento centralizado do estado da aplicação. Essencial para controlar informações complexas como dados do usuário logado, produtos no carrinho, e o status de leilões em tempo real.
+    * 🔄 **Axios:** Cliente HTTP para realizar as requisições à nossa API de backend de forma simplificada e poderosa, facilitando a comunicação entre o frontend e o servidor.
+    * 🎨 **Material-UI (MUI) ou Chakra UI:** Biblioteca de componentes de UI pré-construídos e customizáveis (botões, modais, inputs) que acelera o desenvolvimento e garante consistência visual e acessibilidade.
+
+#### **Backend (Servidor e Lógica de Negócio)**
+
+* **Framework Principal:** **Express.js** (sobre Node.js)
+    * **Função:** Criação da API RESTful que servirá como a espinha dorsal da nossa aplicação, gerenciando rotas, requisições e a lógica de negócio.
+
+* **Bibliotecas Complementares:**
+    * 🐘 **Sequelize:** Um ORM (*Object-Relational Mapper*) para Node.js que facilita a interação com o banco de dados PostgreSQL. Ele traduz código JavaScript em consultas SQL, tornando o acesso aos dados mais seguro e manutenível.
+    * 🔐 **JSON Web Tokens (JWT) e Bcrypt.js:** Para implementar a autenticação e autorização de usuários. `Bcrypt.js` será usado para criptografar senhas antes de salvá-las no banco, e `JWT` para criar tokens de sessão seguros que validam o usuário em requisições protegidas.
+    * ⚡ **Socket.IO:** Biblioteca para habilitar a comunicação em tempo real e bidirecional entre o cliente e o servidor. Será fundamental para as funcionalidades de **chat interno** e para a **atualização de lances em leilões** ao vivo.
+
 ---
 
 ## 3. 📋 Requisitos Funcionais (Resumo)
@@ -97,9 +122,39 @@ Esta seção será atualizada com os diagramas UML relevantes para o projeto, in
 -   Diagrama de Sequência
 -   Diagrama de Atividades
 
+
+## 🌳 Estrutura Inicial de Pastas do Projeto:
+
+Para manter o código organizado e escalável, o projeto seguirá uma estrutura de monorepositório, com o código do frontend (`client`) e do backend (`server`) separados em suas próprias pastas na raiz do projeto.
+
+```
+/loopmarket-project
+├── 📁 client/         // Aplicação Frontend em React
+│   ├── public/         // Arquivos estáticos (index.html, favicon)
+│   └── src/            // Código-fonte do frontend
+│       ├── 📁 assets/       // Imagens, fontes e estilos globais (CSS/Sass)
+│       ├── 📁 components/   // Componentes reutilizáveis (Button, Navbar, ProductCard)
+│       ├── 📁 pages/        // Componentes de cada página (HomePage, LoginPage, ProductPage)
+│       ├── 📁 redux/        // Configuração do Redux (store, slices, reducers)
+│       ├── 📁 services/     // Funções de chamada à API (api.js com Axios)
+│       ├── App.jsx         // Componente principal que gerencia as rotas
+│       └── index.js        // Ponto de entrada da aplicação React
+│
+├── 📁 server/         // Aplicação Backend em Node.js/Express
+│   ├── 📁 config/       // Configurações (conexão com DB, variáveis de ambiente)
+│   ├── 📁 controllers/  // Lógica de negócio (o que fazer com cada requisição)
+│   ├── 📁 middlewares/  // Funções intermediárias (ex: verificação de token JWT)
+│   ├── 📁 models/       // Definição das tabelas do banco com Sequelize (User, Product)
+│   ├── 📁 routes/       // Definição das rotas da API (ex: /users, /products)
+│   └── server.js       // Ponto de entrada do servidor Express
+│
+├── .gitignore          // Arquivo para ignorar pastas (node_modules)
+└── README.md           // Documentação do projeto (este arquivo)
+```
+
 ---
 
-## 6. 🧑‍🎓 Autores (nome/RA|)
+## 6. 🧑‍🎓 Autores (nome/RA):
 
-* Sérgio Pinton Pavanelli - 123220202
+* Sérgio Pinton Pavanelli - RA: 123220202
 * Mateus Mendes Mattos - 123117292
