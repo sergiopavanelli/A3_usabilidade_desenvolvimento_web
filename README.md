@@ -80,8 +80,8 @@ O projeto completo detalha 10 casos de uso essenciais, incluindo:
 3.  **👤 Gerenciar Perfil**
 4.  **➕ Cadastrar Produto**
 5.  **🔍 Buscar Produtos**
-6.  ** auctions Iniciar Leilão**
-7.  ** bid Dar Lance**
+6.  **🔨 Iniciar Leilão**
+7.  **💰 Dar Lance**
 8.  **🛒 Comprar Imediatamente**
 9.  **🗨️ Negociar via Chat**
 10. **🌟 Avaliar Usuário**
