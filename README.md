@@ -156,5 +156,5 @@ Para manter o código organizado e escalável, o projeto seguirá uma estrutura 
 
 ## 6. 🧑‍🎓 Autores (nome/RA):
 
-* Sérgio Pinton Pavanelli - RA: 123220202
+* Sérgio Pinton Pavanelli - 123220202
 * Mateus Mendes Mattos - 123117292
