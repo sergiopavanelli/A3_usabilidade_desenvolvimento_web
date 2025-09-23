@@ -99,4 +99,4 @@ Esta seção será atualizada com os diagramas UML relevantes para o projeto, in
 
 ## 6. 🧑‍🎓 Autores
 
-* [Seu Nome Completo] - [Seu RA/Matrícula]
+* Sérgio Pinton Pavanelli - RA: 123220202
