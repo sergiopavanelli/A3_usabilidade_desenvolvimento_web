@@ -99,7 +99,7 @@ Esta seção será atualizada com os diagramas UML relevantes para o projeto, in
 
 ---
 
-## 6. 🧑‍🎓 Autores
+## 6. 🧑‍🎓 Autores (nome/RA|)
 
-* Sérgio Pinton Pavanelli - RA: 123220202
+* Sérgio Pinton Pavanelli - 123220202
 * Mateus Mendes Mattos - 123117292
