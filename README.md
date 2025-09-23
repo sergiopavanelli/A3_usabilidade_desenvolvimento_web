@@ -156,5 +156,8 @@ Para manter o código organizado e escalável, o projeto seguirá uma estrutura 
 
 ## 6. 🧑‍🎓 Autores (nome/RA):
 
-* Sérgio Pinton Pavanelli - 123220202
+* Ana Luísa Pacífico 1232023412
+* Júlia Suriani de Oliveira Silva 12319522
+* Mariana Teixeira Gonçalves 123115663
 * Mateus Mendes Mattos - 123117292
+* Sérgio Pinton Pavanelli - 123220202
