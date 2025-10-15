@@ -11,27 +11,55 @@ const Register = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
     phone: "",
     password: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validação básica
-    if (!formData.name || !formData.email || !formData.phone || !formData.password) {
-      toast.error("Por favor, preencha todos os campos");
-      return;
-    }
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
 
-    // Simulação de cadastro bem-sucedido
-    toast.success("Conta criada com sucesso!");
-    setTimeout(() => {
-      navigate("/profile");
-    }, 1000);
-  };
+        // Validação básica
+        if (!formData.nome || !formData.email || !formData.phone || !formData.password) {
+            toast.error("Por favor, preencha todos os campos");
+            return;
+        }
+
+        // Monta o payload para a API
+        const payload = {
+            id: 0, // sempre 0 para criar novo usuário
+            nome: formData.nome,
+            email: formData.email,
+            telefone: formData.phone,
+            senha: formData.password,
+        };
+
+        try {
+            const response = await fetch("https://localhost:7103/api/Usuario", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                toast.error(`Erro ao criar conta: ${errorData.message || response.statusText}`);
+                return;
+            }
+
+            toast.success("Conta criada com sucesso!");
+            setTimeout(() => {
+                navigate("/products");
+            }, 1000);
+        } catch (error) {
+            console.error(error);
+            toast.error("Erro ao conectar com o servidor.");
+        }
+    };
+
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
@@ -55,8 +83,8 @@ const Register = () => {
                 id="name"
                 type="text"
                 placeholder="Seu nome completo"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                value={formData.nome}
+                onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
                 className="h-12"
               />
             </div>

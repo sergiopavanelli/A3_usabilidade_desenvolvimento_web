@@ -133,7 +133,7 @@ const Profile = () => {
 
         {/* CTA Button */}
         <Button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/products")}
           className="w-full h-14 text-base font-medium"
           size="lg"
         >
